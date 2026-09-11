@@ -150,35 +150,27 @@ function AcademyLayout() {
 
 
 function App() {
-
     return (
         <BrowserRouter>
-
             <Routes>
 
-                {/* =================================
-                    LOGIN PAGE
-                    NO SIDEBAR
-                ================================== */}
-
+                {/* PUBLIC PAGE */}
                 <Route
                     path="/login"
                     element={<Login />}
                 />
 
-
-                {/* =================================
-                    ACADEMY APPLICATION
-                    SIDEBAR INCLUDED
-                ================================== */}
-
+                {/* ALL OTHER PAGES REQUIRE LOGIN */}
                 <Route
                     path="*"
-                    element={<AcademyLayout />}
+                    element={
+                        <ProtectedRoute>
+                            <AcademyLayout />
+                        </ProtectedRoute>
+                    }
                 />
 
             </Routes>
-
         </BrowserRouter>
     );
 }

@@ -1,4 +1,6 @@
 import { NavLink } from "react-router-dom";
+import LogoutButton from "./LogoutButton";
+
 
 const icons = {
     dashboard: (
@@ -197,6 +199,7 @@ function Sidebar() {
 
                 <div className="sidebar-version">
                     Karate Academy <span>v1.0</span>
+			<LogoutButton />
                 </div>
             </div>
         </aside>
