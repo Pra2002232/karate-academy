@@ -19,11 +19,15 @@ app.use(express.json());
 // Attendance Routes
 // ========================================
 
+const authRoutes = require("./routes/authRoutes");
+
 const studentRoutes =
     require("./routes/studentRoutes");
 
 const attendanceRoutes =
     require("./routes/attendanceRoutes");
+
+app.use("/api/auth", authRoutes);
 
 app.use(
     "/api/students",
