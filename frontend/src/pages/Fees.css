@@ -1,0 +1,611 @@
+/* =========================================================
+   FEES PAGE - FINAL LAYOUT
+   Keeps existing academy design and colors
+   ========================================================= */
+
+.fees-page {
+    width: 100%;
+    max-width: none;
+    padding: 16px 36px 24px;
+    box-sizing: border-box;
+}
+
+
+/* =========================================================
+   HEADER
+   ========================================================= */
+
+.fees-header {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+    margin-bottom: 18px;
+}
+
+.fees-header-content {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.fees-header-icon {
+    width: 52px;
+    height: 52px;
+    min-width: 52px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 14px;
+    background: #fff3ed;
+    font-size: 25px;
+}
+
+.fees-header h1 {
+    margin: 0 0 5px;
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.fees-header p {
+    margin: 0;
+    font-size: 13px;
+    color: #8a94a6;
+}
+
+
+/* =========================================================
+   ADD BUTTON
+   ========================================================= */
+
+.fees-add-button {
+    min-width: 110px;
+    height: 42px;
+    padding: 0 18px;
+
+    border: none;
+    border-radius: 8px;
+
+    background: #d71920;
+    color: #ffffff;
+
+    font-size: 13px;
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.fees-add-button:hover {
+    transform: translateY(-1px);
+
+    box-shadow:
+        0 6px 14px rgba(215, 25, 32, 0.18);
+}
+
+
+/* =========================================================
+   SUMMARY CARDS
+   ========================================================= */
+
+.fees-summary {
+    width: 100%;
+
+    display: grid;
+    grid-template-columns:
+        repeat(3, minmax(0, 1fr));
+
+    gap: 16px;
+
+    margin-bottom: 18px;
+}
+
+.fees-summary-card {
+    min-height: 100px;
+
+    padding: 20px 22px;
+
+    box-sizing: border-box;
+
+    border: 1px solid #e5e7eb;
+    border-radius: 14px;
+
+    background: #ffffff;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    position: relative;
+
+    overflow: hidden;
+}
+
+.fees-summary-card::after {
+    content: "";
+
+    position: absolute;
+
+    width: 70px;
+    height: 70px;
+
+    right: -25px;
+    bottom: -30px;
+
+    border-radius: 50%;
+
+    background: #f8fafc;
+}
+
+.fees-summary-card.pending {
+    border-left: 4px solid #d71920;
+}
+
+.fees-summary-card.completed {
+    border-left: 4px solid #16a34a;
+}
+
+.fees-summary-label {
+    font-size: 11px;
+    font-weight: 700;
+
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+
+    color: #8a94a6;
+
+    margin-bottom: 7px;
+}
+
+.fees-summary-value {
+    font-size: 23px;
+    font-weight: 700;
+
+    color: #172033;
+
+    line-height: 1.2;
+}
+
+.fees-summary-subtitle {
+    margin-top: 6px;
+
+    font-size: 11px;
+    color: #8a94a6;
+}
+
+
+/* =========================================================
+   ADD FEE FORM
+   ========================================================= */
+
+.fees-form-card {
+    width: 100%;
+
+    margin-bottom: 26px;
+
+    padding: 26px;
+
+    box-sizing: border-box;
+
+    border: 1px solid #e5e7eb;
+    border-radius: 14px;
+
+    background: #ffffff;
+
+    box-shadow:
+        0 4px 16px rgba(15, 23, 42, 0.04);
+}
+
+.fees-form-title {
+    margin: 0 0 24px;
+
+    font-size: 20px;
+    font-weight: 700;
+
+    color: #172033;
+}
+
+.fees-form {
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, minmax(0, 1fr));
+
+    gap: 20px 24px;
+}
+
+.fees-field {
+    display: flex;
+    flex-direction: column;
+
+    gap: 7px;
+}
+
+.fees-field.full-width {
+    grid-column: 1 / -1;
+}
+
+.fees-field label {
+    font-size: 12px;
+    font-weight: 600;
+
+    color: #4b5563;
+}
+
+.fees-field input,
+.fees-field select {
+    width: 100%;
+    height: 42px;
+
+    padding: 0 12px;
+
+    box-sizing: border-box;
+
+    border: 1px solid #dfe3e8;
+    border-radius: 8px;
+
+    background: #ffffff;
+
+    color: #172033;
+
+    font-size: 13px;
+
+    outline: none;
+
+    transition:
+        border-color 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.fees-field input:focus,
+.fees-field select:focus {
+    border-color: #d71920;
+
+    box-shadow:
+        0 0 0 3px rgba(215, 25, 32, 0.08);
+}
+
+.fees-form-actions {
+    grid-column: 1 / -1;
+
+    display: flex;
+    justify-content: flex-end;
+
+    padding-top: 4px;
+}
+
+.fees-save-button {
+    min-width: 120px;
+    height: 42px;
+
+    padding: 0 20px;
+
+    border: none;
+    border-radius: 8px;
+
+    background: #d71920;
+    color: #ffffff;
+
+    font-size: 13px;
+    font-weight: 700;
+
+    cursor: pointer;
+}
+
+.fees-save-button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+
+/* =========================================================
+   FEE RECORDS
+   ========================================================= */
+
+.fees-records-card {
+    width: 100%;
+
+    background: #ffffff;
+
+    border: 1px solid #e5e7eb;
+    border-radius: 14px;
+
+    overflow: hidden;
+
+    box-shadow:
+        0 4px 16px rgba(15, 23, 42, 0.04);
+}
+
+.fees-records-header {
+    min-height: 62px;
+
+    padding: 18px 24px;
+
+    box-sizing: border-box;
+
+    display: flex;
+    align-items: center;
+
+    border-bottom: 1px solid #edf0f3;
+}
+
+.fees-records-header h2 {
+    margin: 0 0 4px;
+
+    font-size: 16px;
+    font-weight: 700;
+
+    color: #172033;
+}
+
+.fees-records-header span {
+    font-size: 11px;
+    color: #8a94a6;
+}
+
+
+/* =========================================================
+   TABLE
+   ========================================================= */
+
+.fees-table-wrapper {
+    width: 100%;
+    overflow-x: auto;
+}
+
+.fees-table {
+    width: 100%;
+
+    min-width: 720px;
+
+    border-collapse: collapse;
+}
+
+.fees-table th {
+    padding: 13px 18px;
+
+    text-align: left;
+
+    background: #fafbfc;
+
+    border-bottom: 1px solid #e5e7eb;
+
+    color: #7b8494;
+
+    font-size: 10px;
+    font-weight: 700;
+
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+
+    white-space: nowrap;
+}
+
+.fees-table td {
+    padding: 15px 18px;
+
+    border-bottom: 1px solid #f0f2f5;
+
+    color: #374151;
+
+    font-size: 12px;
+
+    vertical-align: middle;
+}
+
+.fees-table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+.fees-table tbody tr:hover {
+    background: #fafbfc;
+}
+
+
+/* =========================================================
+   STUDENT
+   ========================================================= */
+
+.fee-student-name {
+    font-size: 13px;
+    font-weight: 700;
+
+    color: #172033;
+
+    margin-bottom: 3px;
+}
+
+.fee-student-code {
+    display: block;
+
+    font-size: 10px;
+
+    color: #8a94a6;
+}
+
+
+/* =========================================================
+   TABLE DATA
+   ========================================================= */
+
+.fee-type {
+    font-weight: 600;
+    color: #374151;
+}
+
+.fee-description {
+    color: #8a94a6;
+}
+
+.fee-amount {
+    font-weight: 700;
+    color: #172033;
+    white-space: nowrap;
+}
+
+.fee-date {
+    white-space: nowrap;
+    color: #667085;
+}
+
+
+/* =========================================================
+   STATUS
+   ========================================================= */
+
+.fee-status-select {
+    min-width: 105px;
+
+    height: 32px;
+
+    padding: 0 9px;
+
+    border-radius: 7px;
+
+    font-size: 10px;
+    font-weight: 700;
+
+    cursor: pointer;
+
+    outline: none;
+}
+
+.fee-status-select.pending {
+    border: 1px solid #fecaca;
+
+    background: #fff1f2;
+
+    color: #d71920;
+}
+
+.fee-status-select.completed {
+    border: 1px solid #bbf7d0;
+
+    background: #f0fdf4;
+
+    color: #16a34a;
+}
+
+
+/* =========================================================
+   EMPTY / LOADING
+   ========================================================= */
+
+.fees-empty {
+    min-height: 220px;
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 8px;
+
+    color: #8a94a6;
+}
+
+.fees-empty-icon {
+    width: 46px;
+    height: 46px;
+
+    margin-bottom: 5px;
+
+    border-radius: 12px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #fff5f5;
+
+    font-size: 20px;
+}
+
+.fees-empty strong {
+    color: #374151;
+    font-size: 13px;
+}
+
+.fees-empty span {
+    font-size: 11px;
+}
+
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 900px) {
+
+    .fees-page {
+        padding: 24px;
+    }
+
+    .fees-summary {
+        grid-template-columns:
+            repeat(3, minmax(0, 1fr));
+    }
+
+}
+
+
+@media (max-width: 700px) {
+
+    .fees-page {
+        padding: 20px 16px 40px;
+    }
+
+    .fees-header {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .fees-add-button {
+        width: 100%;
+    }
+
+    .fees-summary {
+        grid-template-columns: 1fr;
+    }
+
+    .fees-form {
+        grid-template-columns: 1fr;
+    }
+
+    .fees-field.full-width {
+        grid-column: auto;
+    }
+
+    .fees-form-actions {
+        grid-column: auto;
+    }
+
+}
+
+/* =========================================================
+   FEES PAGE - OVERRIDE MODULE PAGE CENTERING
+   ========================================================= */
+
+.fees-page {
+    min-height: auto !important;
+
+    display: block !important;
+
+    align-items: initial !important;
+    justify-content: initial !important;
+
+    text-align: left !important;
+
+    width: 100%;
+    box-sizing: border-box;
+
+    padding: 18px 36px 30px !important;
+}

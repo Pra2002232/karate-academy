@@ -1,0 +1,1156 @@
+/* =========================================================
+   BELT & GRADES
+========================================================= */
+
+.belt-page {
+    width: 100%;
+    min-height: 100%;
+    box-sizing: border-box;
+    padding: 24px 34px 40px;
+    background: #f6f8fb;
+}
+
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.belt-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    margin-bottom: 24px;
+}
+
+.belt-title-row {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.belt-title-icon {
+    width: 56px;
+    height: 56px;
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #111827;
+    font-size: 28px;
+    box-shadow: 0 8px 22px rgba(15, 23, 42, 0.15);
+}
+
+.belt-header h1 {
+    margin: 0 0 5px;
+    font-size: 28px;
+    color: #111827;
+}
+
+.belt-header p {
+    margin: 0;
+    color: #64748b;
+    font-size: 14px;
+}
+
+
+/* =========================================================
+   BUTTONS
+========================================================= */
+
+.primary-belt-btn {
+    border: none;
+    border-radius: 10px;
+    padding: 12px 18px;
+    background: #111827;
+    color: white;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.primary-belt-btn:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 8px 18px rgba(15, 23, 42, 0.18);
+}
+
+.primary-belt-btn:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+.small-btn {
+    padding: 10px 15px;
+}
+
+
+/* =========================================================
+   ERROR
+========================================================= */
+
+.belt-error {
+    background: #fef2f2;
+    border: 1px solid #fecaca;
+    color: #b91c1c;
+    padding: 12px 15px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+
+/* =========================================================
+   STATISTICS
+========================================================= */
+
+.belt-stat-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+    margin-bottom: 20px;
+}
+
+.belt-stat-card {
+    background: white;
+    border: 1px solid #e5e7eb;
+    border-radius: 14px;
+    padding: 19px;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    box-shadow: 0 4px 16px rgba(15, 23, 42, 0.04);
+}
+
+.stat-icon {
+    width: 45px;
+    height: 45px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    background: #f1f5f9;
+}
+
+.belt-stat-card span {
+    display: block;
+    color: #64748b;
+    font-size: 12px;
+    margin-bottom: 5px;
+}
+
+.belt-stat-card strong {
+    display: block;
+    color: #111827;
+    font-size: 25px;
+}
+
+
+/* =========================================================
+   PROGRESSION
+========================================================= */
+
+.belt-progression-card {
+    background: white;
+    border: 1px solid #e5e7eb;
+    border-radius: 15px;
+    padding: 21px;
+    margin-bottom: 20px;
+}
+
+.section-heading h2,
+.content-toolbar h2 {
+    margin: 0;
+    color: #111827;
+    font-size: 18px;
+}
+
+.section-heading p,
+.content-toolbar p {
+    margin: 5px 0 0;
+    color: #64748b;
+    font-size: 13px;
+}
+
+.belt-progression {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+    margin-top: 22px;
+    overflow-x: auto;
+    padding-bottom: 5px;
+}
+
+.progression-item {
+    position: relative;
+    min-width: 85px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+}
+
+.progression-item strong {
+    font-size: 12px;
+    color: #334155;
+}
+
+.progression-item span {
+    font-size: 10px;
+    color: #94a3b8;
+}
+
+.progression-arrow {
+    position: absolute;
+    right: -25px;
+    top: 17px;
+    color: #cbd5e1;
+    font-size: 18px;
+}
+
+.belt-circle {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    border: 2px solid #d1d5db;
+    box-sizing: border-box;
+}
+
+.belt-circle.white,
+.large-belt-circle.white {
+    background: white;
+}
+
+.belt-circle.yellow,
+.large-belt-circle.yellow {
+    background: #facc15;
+}
+
+.belt-circle.orange,
+.large-belt-circle.orange {
+    background: #f97316;
+}
+
+.belt-circle.green,
+.large-belt-circle.green {
+    background: #22c55e;
+}
+
+.belt-circle.blue,
+.large-belt-circle.blue {
+    background: #2563eb;
+}
+
+.belt-circle.purple,
+.large-belt-circle.purple {
+    background: #8b5cf6;
+}
+
+.belt-circle.brown,
+.large-belt-circle.brown {
+    background: #78350f;
+}
+
+.belt-circle.black,
+.large-belt-circle.black {
+    background: #111827;
+}
+
+
+/* =========================================================
+   TABS
+========================================================= */
+
+.belt-tabs {
+    display: flex;
+    gap: 5px;
+    background: white;
+    border: 1px solid #e5e7eb;
+    padding: 5px;
+    border-radius: 11px;
+    margin-bottom: 18px;
+    width: fit-content;
+}
+
+.belt-tabs button {
+    border: none;
+    background: transparent;
+    padding: 10px 17px;
+    border-radius: 8px;
+    color: #64748b;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.belt-tabs button.active {
+    background: #111827;
+    color: white;
+}
+
+
+/* =========================================================
+   CONTENT
+========================================================= */
+
+.belt-content-card {
+    background: white;
+    border: 1px solid #e5e7eb;
+    border-radius: 15px;
+    padding: 21px;
+    box-shadow: 0 4px 16px rgba(15, 23, 42, 0.04);
+}
+
+.content-toolbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.belt-search {
+    min-width: 250px;
+    border: 1px solid #dbe2ea;
+    border-radius: 9px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 0 11px;
+    color: #94a3b8;
+}
+
+.belt-search input {
+    border: none;
+    outline: none;
+    width: 100%;
+    padding: 10px 5px;
+    background: transparent;
+}
+
+
+/* =========================================================
+   STUDENT CARDS
+========================================================= */
+
+.student-belt-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+}
+
+.student-belt-card {
+    border: 1px solid #e5e7eb;
+    border-radius: 14px;
+    padding: 18px;
+    background: #fff;
+    transition: 0.2s ease;
+}
+
+.student-belt-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(15, 23, 42, 0.08);
+}
+
+.student-card-top {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.student-avatar {
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    background: #e2e8f0;
+    color: #334155;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 800;
+}
+
+.student-card-top h3 {
+    margin: 0 0 3px;
+    font-size: 15px;
+    color: #111827;
+}
+
+.student-card-top span,
+.student-avatar + div span {
+    color: #94a3b8;
+    font-size: 11px;
+}
+
+.current-belt-display {
+    margin: 20px 0;
+    padding: 14px;
+    background: #f8fafc;
+    border-radius: 11px;
+    display: flex;
+    align-items: center;
+    gap: 13px;
+}
+
+.large-belt-circle {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    border: 2px solid #d1d5db;
+    flex-shrink: 0;
+}
+
+.current-belt-display span,
+.student-progress-info span {
+    display: block;
+    color: #94a3b8;
+    font-size: 10px;
+    margin-bottom: 3px;
+}
+
+.current-belt-display strong {
+    display: block;
+    color: #1e293b;
+    font-size: 16px;
+}
+
+.current-belt-display small {
+    color: #64748b;
+}
+
+.student-progress-info {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
+
+.student-progress-info > div {
+    border-top: 1px solid #eef2f7;
+    padding-top: 11px;
+}
+
+.student-progress-info strong {
+    font-size: 12px;
+    color: #334155;
+}
+
+.student-card-footer {
+    border-top: 1px solid #eef2f7;
+    margin-top: 14px;
+    padding-top: 12px;
+    color: #64748b;
+    font-size: 11px;
+}
+
+
+/* =========================================================
+   EMPTY
+========================================================= */
+
+.belt-empty {
+    padding: 40px 20px;
+    text-align: center;
+    color: #64748b;
+}
+
+.large-empty {
+    padding: 65px 20px;
+}
+
+.large-empty > div {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+.large-empty h3 {
+    margin: 0 0 5px;
+    color: #334155;
+}
+
+.large-empty p {
+    margin: 0;
+}
+
+
+/* =========================================================
+   TABLE
+========================================================= */
+
+.belt-table-wrapper {
+    overflow-x: auto;
+}
+
+.belt-table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 950px;
+}
+
+.belt-table th {
+    background: #f8fafc;
+    color: #64748b;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    text-align: left;
+    padding: 12px;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.belt-table td {
+    padding: 13px 12px;
+    border-bottom: 1px solid #eef2f7;
+    color: #475569;
+    font-size: 12px;
+}
+
+.belt-table td strong {
+    display: block;
+    color: #1e293b;
+}
+
+.belt-table td small {
+    display: block;
+    color: #94a3b8;
+    margin-top: 2px;
+}
+
+.table-belt,
+.target-belt {
+    font-weight: 700;
+    color: #334155;
+}
+
+.exam-status {
+    display: inline-block;
+    padding: 5px 9px;
+    border-radius: 20px;
+    font-size: 10px;
+    font-weight: 800;
+}
+
+.exam-status.scheduled {
+    background: #eff6ff;
+    color: #2563eb;
+}
+
+.exam-status.passed {
+    background: #ecfdf5;
+    color: #059669;
+}
+
+.exam-status.failed {
+    background: #fef2f2;
+    color: #dc2626;
+}
+
+.action-buttons {
+    display: flex;
+    gap: 6px;
+}
+
+.table-action-btn,
+.promote-btn {
+    border: none;
+    border-radius: 7px;
+    padding: 7px 9px;
+    cursor: pointer;
+    font-size: 11px;
+    font-weight: 700;
+}
+
+.table-action-btn {
+    background: #f1f5f9;
+    color: #334155;
+}
+
+.promote-btn {
+    background: #ecfdf5;
+    color: #047857;
+}
+
+
+/* =========================================================
+   HISTORY
+========================================================= */
+
+.history-timeline {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.history-item {
+    display: grid;
+    grid-template-columns: 100px 18px 1fr;
+    gap: 10px;
+    align-items: start;
+}
+
+.history-date {
+    font-size: 11px;
+    color: #64748b;
+    padding-top: 15px;
+    text-align: right;
+}
+
+.history-line {
+    width: 2px;
+    min-height: 70px;
+    background: #e2e8f0;
+    margin-top: 10px;
+    position: relative;
+}
+
+.history-line::before {
+    content: "";
+    position: absolute;
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    background: #111827;
+    left: -3.5px;
+    top: 2px;
+}
+
+.history-card {
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+    padding: 14px;
+}
+
+.history-student {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.history-student strong,
+.history-student span {
+    display: block;
+}
+
+.history-student strong {
+    color: #1e293b;
+}
+
+.history-student span {
+    color: #94a3b8;
+    font-size: 11px;
+}
+
+.history-transition {
+    margin-top: 14px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: 700;
+}
+
+.history-old {
+    color: #64748b;
+}
+
+.history-new {
+    color: #059669;
+}
+
+.history-card p {
+    margin: 10px 0 0;
+    color: #64748b;
+    font-size: 12px;
+}
+
+
+/* =========================================================
+   MODAL
+========================================================= */
+
+.belt-modal-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(15, 23, 42, 0.55);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    z-index: 1000;
+}
+
+.belt-modal {
+    width: min(680px, 100%);
+    max-height: 90vh;
+    overflow-y: auto;
+    background: white;
+    border-radius: 17px;
+    box-shadow: 0 25px 70px rgba(15, 23, 42, 0.25);
+}
+
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 22px;
+    border-bottom: 1px solid #eef2f7;
+}
+
+.modal-header h2 {
+    margin: 0;
+    color: #111827;
+    font-size: 20px;
+}
+
+.modal-header p {
+    margin: 5px 0 0;
+    color: #64748b;
+    font-size: 12px;
+}
+
+.modal-close {
+    border: none;
+    background: #f1f5f9;
+    width: 32px;
+    height: 32px;
+    border-radius: 8px;
+    font-size: 22px;
+    cursor: pointer;
+    color: #475569;
+}
+
+.belt-form {
+    padding: 22px;
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+.belt-form label {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    color: #475569;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.belt-form input,
+.belt-form select,
+.belt-form textarea {
+    width: 100%;
+    box-sizing: border-box;
+    border: 1px solid #dbe2ea;
+    border-radius: 8px;
+    padding: 10px 11px;
+    outline: none;
+    font-family: inherit;
+    color: #1e293b;
+    background: white;
+}
+
+.belt-form input:focus,
+.belt-form select:focus,
+.belt-form textarea:focus {
+    border-color: #64748b;
+}
+
+.belt-form textarea {
+    resize: vertical;
+}
+
+.modal-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 9px;
+    margin-top: 20px;
+}
+
+.secondary-btn {
+    border: 1px solid #dbe2ea;
+    background: white;
+    color: #475569;
+    border-radius: 9px;
+    padding: 11px 17px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+
+/* =========================================================
+   SCORES
+========================================================= */
+
+.score-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 14px;
+}
+
+.total-score-box {
+    margin: 20px 0;
+    padding: 17px;
+    border-radius: 12px;
+    background: #f8fafc;
+    text-align: center;
+}
+
+.total-score-box span {
+    display: block;
+    color: #64748b;
+    font-size: 12px;
+}
+
+.total-score-box strong {
+    font-size: 30px;
+    color: #111827;
+}
+
+.total-score-box small {
+    color: #94a3b8;
+}
+
+
+/* =========================================================
+   PROMOTION
+========================================================= */
+
+.promotion-modal {
+    width: min(500px, 100%);
+    padding: 28px;
+    text-align: center;
+}
+
+.promotion-icon {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: #f1f5f9;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 28px;
+    margin: 0 auto 14px;
+}
+
+.promotion-modal h2 {
+    margin: 0;
+    color: #111827;
+}
+
+.promotion-description {
+    color: #64748b;
+    font-size: 13px;
+}
+
+.promotion-student {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    text-align: left;
+    background: #f8fafc;
+    border-radius: 11px;
+    padding: 13px;
+    margin: 20px 0;
+}
+
+.promotion-student strong,
+.promotion-student span {
+    display: block;
+}
+
+.promotion-student strong {
+    color: #1e293b;
+}
+
+.promotion-student span {
+    color: #94a3b8;
+    font-size: 11px;
+}
+
+.promotion-transition {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 22px;
+    margin: 20px 0;
+}
+
+.promotion-transition div:not(.promotion-arrow) {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.promotion-transition span {
+    color: #94a3b8;
+    font-size: 10px;
+}
+
+.promotion-transition strong {
+    color: #1e293b;
+    font-size: 17px;
+}
+
+.promotion-arrow {
+    font-size: 25px;
+    color: #94a3b8;
+}
+
+.promotion-warning {
+    background: #fffbeb;
+    color: #92400e;
+    border: 1px solid #fde68a;
+    border-radius: 9px;
+    padding: 11px;
+    font-size: 11px;
+    text-align: left;
+}
+
+.promote-confirm-btn {
+    border: none;
+    border-radius: 9px;
+    padding: 11px 17px;
+    background: #059669;
+    color: white;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.promote-confirm-btn:disabled {
+    opacity: 0.6;
+}
+
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 1100px) {
+
+    .belt-stat-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .student-belt-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+
+@media (max-width: 750px) {
+
+    .belt-page {
+        padding: 18px;
+    }
+
+    .belt-header {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .belt-stat-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .student-belt-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .content-toolbar {
+        align-items: stretch;
+        flex-direction: column;
+    }
+
+    .belt-search {
+        min-width: 0;
+    }
+
+    .belt-tabs {
+        width: 100%;
+        overflow-x: auto;
+    }
+
+    .belt-tabs button {
+        white-space: nowrap;
+    }
+
+    .form-grid,
+    .score-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .history-item {
+        grid-template-columns: 70px 10px 1fr;
+    }
+
+    .history-date {
+        font-size: 9px;
+    }
+
+    .promotion-transition {
+        gap: 10px;
+    }
+}
+
+/* =========================================================
+   BELT-WISE STUDENT DISTRIBUTION
+========================================================= */
+
+.belt-distribution-card {
+    background: white;
+    border: 1px solid #e5e7eb;
+    border-radius: 15px;
+    padding: 21px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 16px rgba(15, 23, 42, 0.04);
+}
+
+.belt-distribution-card .section-heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+}
+
+.distribution-total {
+    background: #f1f5f9;
+    color: #475569;
+    border-radius: 20px;
+    padding: 7px 12px;
+    font-size: 11px;
+    font-weight: 700;
+}
+
+.belt-distribution-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 14px;
+    margin-top: 20px;
+}
+
+.belt-distribution-item {
+    border: 1px solid #e5e7eb;
+    border-radius: 13px;
+    padding: 16px;
+    background: #ffffff;
+    transition: 0.2s ease;
+}
+
+.belt-distribution-item:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 22px rgba(15, 23, 42, 0.07);
+}
+
+.distribution-top {
+    display: flex;
+    align-items: center;
+    gap: 11px;
+}
+
+.distribution-belt-circle {
+    width: 38px;
+    height: 38px;
+    min-width: 38px;
+    border-radius: 50%;
+    border: 2px solid #d1d5db;
+    box-sizing: border-box;
+}
+
+.distribution-belt-circle.white {
+    background: #ffffff;
+}
+
+.distribution-belt-circle.yellow {
+    background: #facc15;
+}
+
+.distribution-belt-circle.orange {
+    background: #f97316;
+}
+
+.distribution-belt-circle.green {
+    background: #22c55e;
+}
+
+.distribution-belt-circle.blue {
+    background: #2563eb;
+}
+
+.distribution-belt-circle.purple {
+    background: #8b5cf6;
+}
+
+.distribution-belt-circle.brown {
+    background: #78350f;
+}
+
+.distribution-belt-circle.black {
+    background: #111827;
+}
+
+.distribution-top h3 {
+    margin: 0 0 3px;
+    font-size: 14px;
+    color: #1e293b;
+}
+
+.distribution-top span {
+    font-size: 10px;
+    color: #94a3b8;
+}
+
+.distribution-count {
+    margin-top: 20px;
+    display: flex;
+    align-items: baseline;
+    gap: 7px;
+}
+
+.distribution-count strong {
+    font-size: 30px;
+    line-height: 1;
+    color: #111827;
+}
+
+.distribution-count span {
+    color: #64748b;
+    font-size: 11px;
+}
+
+.distribution-bar {
+    height: 5px;
+    background: #eef2f7;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-top: 15px;
+}
+
+.distribution-bar div {
+    height: 100%;
+    border-radius: 10px;
+    background: #111827;
+    transition: width 0.4s ease;
+}
+
+@media (max-width: 1100px) {
+
+    .belt-distribution-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+@media (max-width: 650px) {
+
+    .belt-distribution-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .belt-distribution-card .section-heading {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+}

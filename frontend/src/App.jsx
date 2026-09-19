@@ -4,6 +4,9 @@ import Sidebar from "./components/Sidebar";
 import Dashboard from "./pages/Dashboard";
 import Students from "./pages/Students";
 import Attendance from "./pages/Attendance";
+import Fees from "./pages/Fees";
+import BeltGrades from "./pages/BeltGrades";
+import Competitions from "./pages/Competitions";
 import Login from "./pages/Login";
 import ProtectedRoute from "./components/ProtectedRoute";
 
@@ -75,13 +78,7 @@ function AcademyLayout() {
 
                     <Route
                         path="/fees"
-                        element={
-                            <ModulePage
-                                title="Fees Management"
-                                subtitle="Manage student fees, payments and pending dues."
-                                icon="💰"
-                            />
-                        }
+                        element={<Fees />}
                     />
 
 
@@ -89,13 +86,7 @@ function AcademyLayout() {
 
                     <Route
                         path="/belts"
-                        element={
-                            <ModulePage
-                                title="Belt & Grade Management"
-                                subtitle="Manage karate belt promotions, grades and examinations."
-                                icon="🥋"
-                            />
-                        }
+                        element={<BeltGrades /> }
                     />
 
 
@@ -103,13 +94,7 @@ function AcademyLayout() {
 
                     <Route
                         path="/competitions"
-                        element={
-                            <ModulePage
-                                title="Competitions"
-                                subtitle="Manage karate competitions, events and participation."
-                                icon="🏆"
-                            />
-                        }
+                        element={<Competitions/>}
                     />
 
 

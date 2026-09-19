@@ -23,27 +23,34 @@ function Dashboard() {
     const [loading, setLoading] = useState(true);
 
     const today = new Date();
-    const todayString = today.toISOString().split("T")[0];
 
-    const formattedDate = today.toLocaleDateString("en-IN", {
-        weekday: "long",
-        day: "numeric",
-        month: "long",
-        year: "numeric"
-    });
+const todayString =
+    `${today.getFullYear()}-${String(today.getMonth() + 1).padStart(2, "0")}-${String(today.getDate()).padStart(2, "0")}`;
+
+const [selectedDate, setSelectedDate] =
+    useState(todayString);
+
+const formattedDate = new Date(
+    `${selectedDate}T00:00:00`
+).toLocaleDateString("en-IN", {
+    weekday: "long",
+    day: "numeric",
+    month: "long",
+    year: "numeric"
+});
 
     useEffect(() => {
-        loadDashboard();
-    }, []);
+        loadDashboard(selectedDate);
+    }, [selectedDate]);
 
-    async function loadDashboard() {
+    async function loadDashboard(date) {
         try {
             setLoading(true);
 
             const [studentsResponse, attendanceResponse] =
                 await Promise.all([
                     api.get("/students"),
-                    api.get(`/attendance/date/${todayString}`)
+                    api.get(`/attendance/date/${date}`)
                 ]);
 
             setStudents(studentsResponse.data.students || []);
@@ -194,12 +201,29 @@ function Dashboard() {
                                 <path d="M16 2v4M8 2v4M3 10h18" />
                             </Icon>
                         </div>
+			
+	    <div>
+        <span>
+            {selectedDate === todayString
+                ? "Today"
+                : "Selected Date"}
+        </span>
 
-                        <div>
-                            <span>Today</span>
-                            <strong>{formattedDate}</strong>
-                        </div>
-                    </div>
+        <strong>{formattedDate}</strong>
+    </div>
+
+    <input
+        type="date"
+        value={selectedDate}
+        onChange={(event) =>
+            setSelectedDate(event.target.value)
+        }
+        className="dashboard-date-input"
+        aria-label="Select dashboard date"
+    />
+
+</div>
+			
 
                 </section>
 

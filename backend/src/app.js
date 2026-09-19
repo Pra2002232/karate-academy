@@ -27,6 +27,18 @@ const studentRoutes =
 const attendanceRoutes =
     require("./routes/attendanceRoutes");
 
+const feesRoutes = require("./routes/feesRoutes");
+
+const beltRoutes = require("./routes/beltRoutes");
+
+const competitionRoutes = require("./routes/competitionRoutes");
+
+app.use("/api/competitions", competitionRoutes);
+
+app.use("/api/belts", beltRoutes);
+
+app.use("/api/fees", feesRoutes);
+
 app.use("/api/auth", authRoutes);
 
 app.use(
