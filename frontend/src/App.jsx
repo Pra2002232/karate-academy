@@ -9,6 +9,7 @@ import BeltGrades from "./pages/BeltGrades";
 import Competitions from "./pages/Competitions";
 import Login from "./pages/Login";
 import ProtectedRoute from "./components/ProtectedRoute";
+import Results from "./pages/Results";
 
 
 function ModulePage({ title, subtitle, icon }) {
@@ -102,13 +103,7 @@ function AcademyLayout() {
 
                     <Route
                         path="/results"
-                        element={
-                            <ModulePage
-                                title="Results & Winners"
-                                subtitle="Manage competition results, rankings and winners."
-                                icon="🥇"
-                            />
-                        }
+                        element={<Results /> }
                     />
 
 

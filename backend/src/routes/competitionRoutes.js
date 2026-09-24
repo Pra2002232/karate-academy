@@ -85,6 +85,54 @@ router.get("/dashboard", async (req, res) => {
     }
 });
 
+/*
+|--------------------------------------------------------------------------
+| GET ALL COMPETITION RESULTS
+|--------------------------------------------------------------------------
+*/
+router.get("/results", async (req, res) => {
+    try {
+        const result = await pool.query(`
+            SELECT
+                cr.id,
+                cr.competition_id,
+                c.competition_name,
+                c.competition_date,
+                c.location,
+                cr.student_id,
+                s.student_code,
+                s.name,
+                s.belt,
+                cr.category,
+                cr.event,
+                cr.result,
+                cr.medal,
+                cr.position,
+                cr.remarks
+            FROM competition_results cr
+            JOIN students s
+                ON cr.student_id = s.id
+            JOIN competitions c
+                ON cr.competition_id = c.id
+            ORDER BY
+                c.competition_date DESC,
+                cr.position NULLS LAST,
+                s.name ASC
+        `);
+
+        res.json({
+            results: result.rows
+        });
+
+    } catch (error) {
+        console.error("Get all competition results error:", error);
+
+        res.status(500).json({
+            message: "Failed to fetch competition results"
+        });
+    }
+});
+
 
 /*
 |--------------------------------------------------------------------------
